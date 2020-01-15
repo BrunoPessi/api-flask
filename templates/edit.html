@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cadastro de aluno</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	</head>
+	<body>
+		<h1 style="text-align: center">Editar {{ aluno.nome }}</h1>
+		<form action="/edit/{{ aluno._id }}" class="container" method="post">
+			<div class="row">
+				<div col-md-6>
+					<input type="text" name="nome" id="nome" placeholder="nome" class="form-control" value="{{ aluno.nome }}">
+				</div>
+				<div col-md-6>
+					<input type="text" name="media" id="media" placeholder="media" class="form-control" value="{{ aluno.media}}">
+				</div>
+			</div>
+			<br>
+			<div class="row col-xs-12">
+				<button type="submit" class="btn btn-block btn-success">Cadastrar</button>
+			</div>
+		</form>
+	</body>
+</html>
